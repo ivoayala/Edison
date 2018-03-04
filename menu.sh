@@ -3,32 +3,50 @@
 
 
 ##Mostrar el menu 
+clear
 echo "*** MENU ***"
-echo "Que quieres hacer ahora?"
+echo " "
+echo "Â¿Que quieres hacer ahora?"
+echo " "
+sleep 2
+
+while :
+do
 
 echo "1) Conocer la temperatura y Humedad" 
 echo "2) Cambiar colores"
 echo "3) Otro"
 
 ###Elegir las opciones 
-while : 
-do 
-	##LEER EL TECLADO 
+#while : 
+#do 
+##LEER EL TECLADO 
 	read INPUT_STRING
        case $INPUT_STRING in
-	  #SÃ­ seleccionamos la opcion uno conoceremos la temperatura y humedad 
-	       1) echo "Veamos la tamperatura y la humedad"
+
+#SÃ­ seleccionamos la opcion uno conoceremos la temperatura y humedad 
+	       1) clear
+	       		echo " "
+	       		echo "Revisemos la tamperatura y la humedadi"
+			echo " "
 		       python sensores.py
 		       ;;
- ##Si elegimos la opciÃn 2 cambiaremos los colores de la LCD 
-	       2) echo "Cambiemos los coloresa la pantalla" 
+#Si elegimos la opciÃn 2 cambiaremos los colores de la LCD 
+	       2) clear
+	       		echo "Cambiemos los colores a la pantalla"
+			echo " " 
 		       ./colores.sh
 		       ;;
-	       3) echo "Otro" 
+	       3) clear
+		       echo "Otro" 
 		       ;; 
-	       *)echo "No has seleccionado una opcion valida"
-		       
-		       break
+	       *)clear
+		       echo "No has seleccionado una opcion valida"
 		       ;; 
-       esac 
+       esac
+       sleep 2
+      clear
+      echo "Que mas quieres hacer?"
+      echo " "
+
        done 

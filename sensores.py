@@ -1,4 +1,4 @@
-import mraa, upm, time
+import mraa, upm, time, sys
 from upm import pyupm_jhd1313m1
 from upm import pyupm_th02
 
@@ -13,17 +13,18 @@ Humidity = 0
 
 while True:
 
-    Temperature = sensores.getTemperature()
-    Humidity = sensores.getHumidity()
+    Temperature = round(sensores.getTemperature(),1)
+    Humidity = round(sensores.getHumidity(),1)
     
-    
-    print 'La temperatura es: '  + str(Temperature)
-    print 'La humedad es: ' + str(Humidity) 
+    print "La temperatura es de %.1f C y la humedad de %.1f%% \n" %(Temperature, Humidity)
+#    print 'La temperatura es: '  + str(Temperature)
+#    print 'La humedad es:     ' + str(Humidity) 
     display.setCursor(0,0)
     display.write('TEMP: ' + str(Temperature))
     display.setCursor(1,0)
     display.write('HUMI:  ' + str(Humidity))
     time.sleep(1.5)
+    exit()
     
 
 
