@@ -16,27 +16,32 @@ echo "Estoy listo para jugar contigo"
 echo " "
 sleep 3s
 
+while :
+do
 ##Mostramos lo que puede hacer
 echo "¿Qué quieres hacer?"
  echo "1) Conocer Temperatura y Humedad"
  echo "2) Cambiar colores" 
- echo "3) Otro "
+ echo "3) Escuchar música "
  ##realizamos un While con case 
-while : 
-do 
+#while : 
+#do 
 ##Lee el teclado 
 read INPUT_STRING
 ##y entra al case 
 case $INPUT_STRING in
       ##En caso de escribir el número uno haro lo siguiente 	
- 1) echo "Haz elegido conocer la temperatura y humedad"
+ 1) clear
+ echo "Haz elegido conocer la temperatura y humedad"
     python sensores.py    
    ;;
 ##En caso de escribir el numero 2  hará lo siguiente
- 2) echo "Haz elegido cambiar colores a la pantalla"
+ 2) clear 
+ echo "Haz elegido cambiar colores a la pantalla"
 	./colores.sh  
 	 ;;
- 3) echo "otro"
+ 3)clear
+	 ./menu_musica.sh
   ;;
 
   ##en caso de escribir algo de lo que no esta seleccionado mostrara otro 
@@ -46,4 +51,6 @@ case $INPUT_STRING in
   ;;
 ##termina el case
 esac 
+clear
+
 done
