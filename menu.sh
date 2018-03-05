@@ -15,7 +15,7 @@ do
 
 echo "1) Conocer la temperatura y Humedad" 
 echo "2) Cambiar colores"
-echo "3) Otro"
+echo "3) Escuchar musica"
 
 ###Elegir las opciones 
 #while : 
@@ -27,7 +27,7 @@ echo "3) Otro"
 #Sí seleccionamos la opcion uno conoceremos la temperatura y humedad 
 	       1) clear
 	       		echo " "
-	       		echo "Revisemos la tamperatura y la humedadi"
+	       		echo "Revisemos la tamperatura y la humedad"
 			echo " "
 		       python sensores.py
 		       ;;
@@ -38,7 +38,8 @@ echo "3) Otro"
 		       ./colores.sh
 		       ;;
 	       3) clear
-		       echo "Otro" 
+		       echo "Escuchar musica"
+		      ./menu_musica.sh 
 		       ;; 
 	       *)clear
 		       echo "No has seleccionado una opcion valida"
